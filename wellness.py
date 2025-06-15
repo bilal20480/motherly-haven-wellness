@@ -54,7 +54,10 @@ if bg_img:
 st.title("🤰 Pregnancy & Postpartum Wellness Planner")
 
 # --- API Configuration ---
-genai.configure(api_key="AIzaSyBqx7s51Swc_l8jJILSjWjqyeNYvJXnFj0")
+api_key=st.secrets["bilal_api"]
+
+# Configure Gemini API key
+genai.configure(api_key=api_key)
 
 # --- State Initialization ---
 if "step" not in st.session_state:
